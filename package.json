@@ -1,11 +1,11 @@
 {
-  "name": "interrogator-api-ts-oa",
+  "name": "@ataastar/interrogator-api-ts-oa",
   "version": "0.0.1",
   "description": "OpenAPI client for interrogator-api-ts-oa",
   "author": "OpenAPI-Generator Contributors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+    "url": "https://github.com/ataastar/interrogator-api-ts-oa.git"
   },
   "keywords": [
     "openapi-client",
@@ -30,4 +30,8 @@
     "rxjs": "^7.5.5",
     "typescript": ">=4.8.2 <4.10.0",
     "zone.js": "^0.11.5"
-  }}
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
