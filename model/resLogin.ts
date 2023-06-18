@@ -23,7 +23,10 @@ export interface ResLogin {
      * The JWT refresh token
      */
     refreshToken: string;
-    roles: Array<string>;
+    /**
+     * The user roles. Currently concatenated with comma
+     */
+    roles: string;
     nickname?: string;
 }
 
