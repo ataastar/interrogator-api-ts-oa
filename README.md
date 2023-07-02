@@ -3,14 +3,28 @@
 ### Building
 
 To install the required dependencies and to build the typescript sources run:
+
 ```
 npm install
 npm run build
 ```
 
+### Login
+
+Maybe need to log in to GitHub with token
+
+```
+npm login --scope=@otpm --auth-type=legacy --registry=https://npm.pkg.github.com
+```
+
+- username: GitHub username
+- password: token
+- email: public GitHub email
+
 ### publishing
 
-First build the package then run ```npm publish dist``` (don't forget to specify the `dist` folder!)
+First build the package then run ```npm publish``` or ```npm publish dist``` (don't forget to specify the `dist`
+folder!)
 
 ### consuming
 

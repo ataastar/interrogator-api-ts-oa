@@ -15,10 +15,25 @@
  * Translation save request
  */
 export interface ReqTranslationSave { 
+    /**
+     * The unit id
+     */
     id: number;
+    /**
+     * The example sentence for the phrase
+     */
     example?: string;
+    /**
+     * The translated example sentence for the phrase
+     */
     translatedExample?: string;
+    /**
+     * The from language phrases
+     */
     from: Array<string>;
+    /**
+     * The to language phrases
+     */
     to: Array<string>;
 }
 

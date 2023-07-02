@@ -26,6 +26,8 @@ import { ReqTranslationSave } from '../model/reqTranslationSave';
 import { ResPhrasesForUnit } from '../model/resPhrasesForUnit';
 // @ts-ignore
 import { ResTranslationsForUnit } from '../model/resTranslationsForUnit';
+// @ts-ignore
+import { Translation } from '../model/translation';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -104,9 +106,9 @@ export class TranslationService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public addTranslation(reqTranslationSave: ReqTranslationSave, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<number>;
-    public addTranslation(reqTranslationSave: ReqTranslationSave, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<number>>;
-    public addTranslation(reqTranslationSave: ReqTranslationSave, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<number>>;
+    public addTranslation(reqTranslationSave: ReqTranslationSave, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<Translation>;
+    public addTranslation(reqTranslationSave: ReqTranslationSave, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<Translation>>;
+    public addTranslation(reqTranslationSave: ReqTranslationSave, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<Translation>>;
     public addTranslation(reqTranslationSave: ReqTranslationSave, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
         if (reqTranslationSave === null || reqTranslationSave === undefined) {
             throw new Error('Required parameter reqTranslationSave was null or undefined when calling addTranslation.');
@@ -160,7 +162,7 @@ export class TranslationService {
         }
 
         let localVarPath = `/word`;
-        return this.httpClient.request<number>('post', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<Translation>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: reqTranslationSave,
