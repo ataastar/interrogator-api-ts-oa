@@ -1,9 +1,8 @@
-## interrogator-api-ts-oa@0.0.1
+## interrogator-api-ts-oa@0.0.5
 
 ### Building
 
 To install the required dependencies and to build the typescript sources run:
-
 ```
 npm install
 npm run build
@@ -14,7 +13,7 @@ npm run build
 Maybe need to log in to GitHub with token
 
 ```
-npm login --scope=@otpm --auth-type=legacy --registry=https://npm.pkg.github.com
+npm login --scope=@ataastar --auth-type=legacy --registry=https://npm.pkg.github.com
 ```
 
 - username: GitHub username
@@ -23,8 +22,8 @@ npm login --scope=@otpm --auth-type=legacy --registry=https://npm.pkg.github.com
 
 ### publishing
 
-First build the package then run ```npm publish``` or ```npm publish dist``` (don't forget to specify the `dist`
-folder!)
+First build the package then run ```npm publish --registry=https://npm.pkg.github.com```  (don't forget to specify
+the `dist` folder! move into the dist folder!)
 
 ### consuming
 
@@ -33,7 +32,7 @@ Navigate to the folder of your consuming project and run one of next commands.
 _published:_
 
 ```
-npm install interrogator-api-ts-oa@0.0.1 --save
+npm install @ataastar/interrogator-api-ts-oa@0.0.4 --save
 ```
 
 _without publishing (not recommended):_
