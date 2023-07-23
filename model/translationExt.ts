@@ -9,24 +9,23 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { TranslationForPhrase } from './translationForPhrase';
 
 
 /**
- * The unit with the translations
+ * The translation extended with the interrogation data and unit content id
  */
-export interface ResPhrasesForUnit { 
+export interface TranslationExt { 
     /**
-     * The name of the unit leaf
+     * The id of the unit content
      */
-    name: string;
+    unitContentId: number;
     /**
-     * The id of the unit leaf
+     * The time when the translation will be interrogated
      */
-    code: number;
+    nextInterrogationTime?: string;
     /**
-     * The translations of the unit with example and calculated interrogation time
+     * The last time when the translation was answered
      */
-    words?: Array<TranslationForPhrase>;
+    lastAnswerTime?: string;
 }
 

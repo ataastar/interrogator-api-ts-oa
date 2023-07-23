@@ -13,21 +13,17 @@ import { TranslationPart } from './translationPart';
 
 
 /**
- * Translations for a phrase (\'to\' and \'from\')
+ * The translation of a phrase and the example sentence
  */
-export interface TranslationForPhrase { 
+export interface RawTranslation { 
     /**
-     * The id of the unit content
+     * The id of the translation link
      */
-    id: number;
+    translationLinkId: number;
     /**
-     * The \'from\' part translations
+     * The translation parts (phrases) for the language id
      */
-    from: Array<TranslationPart>;
-    /**
-     * The \'to\' part translations
-     */
-    to: Array<TranslationPart>;
+    phrasesByLanguageId: { [key: string]: Array<TranslationPart>; };
     /**
      * An example sentence for the phrase
      */
@@ -36,13 +32,5 @@ export interface TranslationForPhrase {
      * The translation of the example sentence
      */
     translatedExample?: string;
-    /**
-     * The time when the translation will be interrogated
-     */
-    nextInterrogationTime?: string;
-    /**
-     * The last time when the translation was answered
-     */
-    lastAnswerTime?: string;
 }
 

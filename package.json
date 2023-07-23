@@ -1,7 +1,7 @@
 {
   "name": "@ataastar/interrogator-api-ts-oa",
-  "version": "0.0.5",
-  "description": "OpenAPI client for interrogator-api-ts-oa",
+  "version": "0.0.7",
+  "description": "OpenAPI client for @ataastar/interrogator-api-ts-oa",
   "author": "OpenAPI-Generator Contributors",
   "repository": {
     "type": "git",

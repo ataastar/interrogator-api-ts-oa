@@ -13,21 +13,17 @@ import { TranslationPart } from './translationPart';
 
 
 /**
- * The translation of a phrase with example and calculated interrogation time
+ * The translation with example and calculated interrogation time and unit content id
  */
 export interface Translation { 
     /**
-     * The id of the unit content
-     */
-    unitContentId?: number;
-    /**
      * The id of the translation link
      */
-    translationLinkId?: number;
+    translationLinkId: number;
     /**
      * The translation parts (phrases) for the language id
      */
-    phrasesByLanguageId?: { [key: string]: Array<TranslationPart>; };
+    phrasesByLanguageId: { [key: string]: Array<TranslationPart>; };
     /**
      * An example sentence for the phrase
      */
@@ -36,6 +32,10 @@ export interface Translation {
      * The translation of the example sentence
      */
     translatedExample?: string;
+    /**
+     * The id of the unit content
+     */
+    unitContentId: number;
     /**
      * The time when the translation will be interrogated
      */

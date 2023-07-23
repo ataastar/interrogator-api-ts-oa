@@ -1,4 +1,4 @@
-## interrogator-api-ts-oa@0.0.5
+## @ataastar/interrogator-api-ts-oa@0.0.7
 
 ### Building
 
@@ -22,8 +22,7 @@ npm login --scope=@ataastar --auth-type=legacy --registry=https://npm.pkg.github
 
 ### publishing
 
-First build the package then run ```npm publish --registry=https://npm.pkg.github.com```  (don't forget to specify
-the `dist` folder! move into the dist folder!)
+First build the package then run (in the dist folder) ```npm publish --registry=https://npm.pkg.github.com```
 
 ### consuming
 
@@ -32,7 +31,7 @@ Navigate to the folder of your consuming project and run one of next commands.
 _published:_
 
 ```
-npm install @ataastar/interrogator-api-ts-oa@0.0.4 --save
+npm install @ataastar/interrogator-api-ts-oa@0.0.7 --save
 ```
 
 _without publishing (not recommended):_
@@ -67,7 +66,7 @@ In your Angular project:
 
 ```
 // without configuring providers
-import { ApiModule } from 'interrogator-api-ts-oa';
+import { ApiModule } from '@ataastar/interrogator-api-ts-oa';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -86,7 +85,7 @@ export class AppModule {}
 
 ```
 // configuring providers
-import { ApiModule, Configuration, ConfigurationParameters } from 'interrogator-api-ts-oa';
+import { ApiModule, Configuration, ConfigurationParameters } from '@ataastar/interrogator-api-ts-oa';
 
 export function apiConfigFactory (): Configuration {
   const params: ConfigurationParameters = {
@@ -106,7 +105,7 @@ export class AppModule {}
 
 ```
 // configuring providers with an authentication service that manages your access tokens
-import { ApiModule, Configuration } from 'interrogator-api-ts-oa';
+import { ApiModule, Configuration } from '@ataastar/interrogator-api-ts-oa';
 
 @NgModule({
     imports: [ ApiModule ],
@@ -130,7 +129,7 @@ export class AppModule {}
 ```
 
 ```
-import { DefaultApi } from 'interrogator-api-ts-oa';
+import { DefaultApi } from '@ataastar/interrogator-api-ts-oa';
 
 export class AppComponent {
     constructor(private apiGateway: DefaultApi) { }
@@ -168,7 +167,7 @@ export class AppModule {
 If different than the generated base path, during app bootstrap, you can provide the base path to your service.
 
 ```
-import { BASE_PATH } from 'interrogator-api-ts-oa';
+import { BASE_PATH } from '@ataastar/interrogator-api-ts-oa';
 
 bootstrap(AppComponent, [
     { provide: BASE_PATH, useValue: 'https://your-web-service.com' },
@@ -177,7 +176,7 @@ bootstrap(AppComponent, [
 or
 
 ```
-import { BASE_PATH } from 'interrogator-api-ts-oa';
+import { BASE_PATH } from '@ataastar/interrogator-api-ts-oa';
 
 @NgModule({
     imports: [],
@@ -201,7 +200,7 @@ export const environment = {
 
 In the src/app/app.module.ts:
 ```
-import { BASE_PATH } from 'interrogator-api-ts-oa';
+import { BASE_PATH } from '@ataastar/interrogator-api-ts-oa';
 import { environment } from '../environments/environment';
 
 @NgModule({
