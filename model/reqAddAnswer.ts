@@ -27,6 +27,10 @@ export interface ReqAddAnswer {
      * The interrogation type. Currently just the WRITING enabled
      */
     interrogationType: ReqAddAnswer.InterrogationTypeEnum;
+    /**
+     * The id of the from language (the from-to can be changed)
+     */
+    fromLanguageId: number;
 }
 export namespace ReqAddAnswer {
     export type InterrogationTypeEnum = 'WRITING' | 'TO_BE_DECIDED';

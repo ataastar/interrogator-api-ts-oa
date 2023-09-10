@@ -298,8 +298,8 @@ export class TranslationService {
     }
 
     /**
-     * Store the result of the success of the translation
-     * Store the answer (Store the result of the success of the translation)
+     * Store the result of the success of the interrogation
+     * Store the answer (Store the result of the success of the interrogation)
      * @param reqAddAnswer Add answer request
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.

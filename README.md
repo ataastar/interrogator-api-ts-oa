@@ -1,4 +1,4 @@
-## @ataastar/interrogator-api-ts-oa@0.0.8
+## @ataastar/interrogator-api-ts-oa@0.1.0
 
 ### Building
 
@@ -31,7 +31,7 @@ Navigate to the folder of your consuming project and run one of next commands.
 _published:_
 
 ```
-npm install @ataastar/interrogator-api-ts-oa@0.0.8 --save
+npm install @ataastar/interrogator-api-ts-oa@0.1.0 --save
 ```
 
 _without publishing (not recommended):_
