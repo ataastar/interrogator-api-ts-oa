@@ -24,7 +24,7 @@ export interface ReqAddAnswer {
      */
     right: boolean;
     /**
-     * The interrogation type. Currently just the WRITING enabled
+     * The interrogation type. Currently just the WRITING, SELF_DECLARATION enabled
      */
     interrogationType: ReqAddAnswer.InterrogationTypeEnum;
     /**
@@ -33,10 +33,10 @@ export interface ReqAddAnswer {
     fromLanguageId: number;
 }
 export namespace ReqAddAnswer {
-    export type InterrogationTypeEnum = 'WRITING' | 'TO_BE_DECIDED';
+    export type InterrogationTypeEnum = 'WRITING' | 'SELF_DECLARATION';
     export const InterrogationTypeEnum = {
         Writing: 'WRITING' as InterrogationTypeEnum,
-        ToBeDecided: 'TO_BE_DECIDED' as InterrogationTypeEnum
+        SelfDeclaration: 'SELF_DECLARATION' as InterrogationTypeEnum
     };
 }
 
