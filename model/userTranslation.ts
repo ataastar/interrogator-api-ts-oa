@@ -9,29 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { TranslationPart } from './translationPart';
 
 
 /**
- * The translation with example and calculated interrogation time and unit content id
+ * The translation extended with the interrogation data and unit content id
  */
-export interface Translation { 
-    /**
-     * The id of the translation link
-     */
-    translationLinkId: number;
-    /**
-     * The translation parts (phrases) for the language id
-     */
-    phrasesByLanguageId: { [key: string]: Array<TranslationPart>; };
-    /**
-     * An example sentence for the phrase
-     */
-    example?: string;
-    /**
-     * The translation of the example sentence
-     */
-    translatedExample?: string;
+export interface UserTranslation { 
     /**
      * The id of the unit content
      */

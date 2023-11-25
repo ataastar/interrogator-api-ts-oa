@@ -17,6 +17,7 @@ model/reqLogin.ts
 model/reqRefreshToken.ts
 model/reqTranslationSave.ts
 model/reqWordTypeUnitLink.ts
+model/resAnswer.ts
 model/resLogin.ts
 model/resTranslationsForUnit.ts
 model/resTranslationsForUnitAllOf.ts
@@ -24,10 +25,10 @@ model/resWordTypeTranslation.ts
 model/resWordTypeTranslationRowsInner.ts
 model/resWordTypeUnitTranslation.ts
 model/translation.ts
-model/translationExt.ts
 model/translationPart.ts
 model/unitGroup.ts
 model/unitLeaf.ts
+model/userTranslation.ts
 model/wordTypeTranslation.ts
 model/wordTypeUnit.ts
 model/wordTypeUnitConnections.ts

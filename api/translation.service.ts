@@ -23,6 +23,8 @@ import { ReqAddAnswer } from '../model/reqAddAnswer';
 // @ts-ignore
 import { ReqTranslationSave } from '../model/reqTranslationSave';
 // @ts-ignore
+import { ResAnswer } from '../model/resAnswer';
+// @ts-ignore
 import { ResTranslationsForUnit } from '../model/resTranslationsForUnit';
 // @ts-ignore
 import { Translation } from '../model/translation';
@@ -180,10 +182,10 @@ export class TranslationService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public cancelAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public cancelAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public cancelAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public cancelAnswer(reqAddAnswer: ReqAddAnswer, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public cancelAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ResAnswer>;
+    public cancelAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ResAnswer>>;
+    public cancelAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ResAnswer>>;
+    public cancelAnswer(reqAddAnswer: ReqAddAnswer, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
         if (reqAddAnswer === null || reqAddAnswer === undefined) {
             throw new Error('Required parameter reqAddAnswer was null or undefined when calling cancelAnswer.');
         }
@@ -201,6 +203,7 @@ export class TranslationService {
         if (localVarHttpHeaderAcceptSelected === undefined) {
             // to determine the Accept header
             const httpHeaderAccepts: string[] = [
+                'application/json'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -235,7 +238,7 @@ export class TranslationService {
         }
 
         let localVarPath = `/answer/cancel`;
-        return this.httpClient.request<any>('post', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<ResAnswer>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: reqAddAnswer,
@@ -379,10 +382,10 @@ export class TranslationService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public storeAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any>;
-    public storeAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpResponse<any>>;
-    public storeAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<HttpEvent<any>>;
-    public storeAnswer(reqAddAnswer: ReqAddAnswer, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: undefined, context?: HttpContext}): Observable<any> {
+    public storeAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<ResAnswer>;
+    public storeAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<ResAnswer>>;
+    public storeAnswer(reqAddAnswer: ReqAddAnswer, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<ResAnswer>>;
+    public storeAnswer(reqAddAnswer: ReqAddAnswer, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
         if (reqAddAnswer === null || reqAddAnswer === undefined) {
             throw new Error('Required parameter reqAddAnswer was null or undefined when calling storeAnswer.');
         }
@@ -400,6 +403,7 @@ export class TranslationService {
         if (localVarHttpHeaderAcceptSelected === undefined) {
             // to determine the Accept header
             const httpHeaderAccepts: string[] = [
+                'application/json'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -434,7 +438,7 @@ export class TranslationService {
         }
 
         let localVarPath = `/answer`;
-        return this.httpClient.request<any>('post', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<ResAnswer>('post', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 body: reqAddAnswer,
